@@ -30,6 +30,7 @@ public class GestorLibro {
     
     public void agregarLibro(Libro libros){
         this.libros.add(libros);
+        
     }
     public void mostrarListaDeLibros(){
         for(int i=0; i<libros.size();i++)

@@ -26,24 +26,28 @@ public class TestPunto8 {
         
         Scanner scanner = new Scanner(System.in);
         
+        
         char r='s';
+       
         
         while (r=='s'|| r=='S')
         {
-            System.out.println("ingrese ISBN");
+            System.out.println("ingrese ISBN ");
             int cod=scanner.nextInt();
             libros.setISBN(cod);
-            System.out.println("Ingrese titulo");
+            System.out.println("Ingrese titulo ");
             String tit=scanner.next();
             libros.setTitulo(tit);
-            System.out.println("Ingrese Autor");
+            System.out.println("Ingrese Autor ");
             String aut=scanner.next();
             libros.setAutor(aut);
-            System.out.println("Ingrese Precio");
+            System.out.println("Ingrese Precio ");
             double pre=scanner.nextDouble();
             libros.setPrecio(pre);
             
+            
             gestor.agregarLibro(libros);
+            libros  = new Libro();
             
             System.out.println("Desea seguir agregando libros");
             String res=scanner.next();
