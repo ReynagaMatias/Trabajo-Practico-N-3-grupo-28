@@ -18,6 +18,7 @@ public class GestorLibro {
     public GestorLibro() {
     }
     
+    
 
     public ArrayList<Libro> getLibros() {
         return libros;

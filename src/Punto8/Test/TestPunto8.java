@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Ines
+ * @author Iness
  */
 public class TestPunto8 {
 
