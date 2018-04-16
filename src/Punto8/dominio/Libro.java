@@ -13,13 +13,25 @@ public class Libro {
     private int ISBN;
     private String titulo;
     private String autor;
-    private String precio;
+    private double precio;
 
-    public Libro(int ISBN, String titulo, String autor, String precio) {
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public Libro(int ISBN, String titulo, String autor, double precio) {
         this.ISBN = ISBN;
         this.titulo = titulo;
         this.autor = autor;
         this.precio = precio;
+    }
+
+    public Libro() {
+      
     }
     
 
@@ -47,13 +59,8 @@ public class Libro {
         this.autor = autor;
     }
 
-    public String getPrecio() {
-        return precio;
+  
     }
+    
+    
 
-    public void setPrecio(String precio) {
-        this.precio = precio;
-    }
-    
-    
-}
