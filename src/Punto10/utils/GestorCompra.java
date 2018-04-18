@@ -3,7 +3,7 @@ package Punto10.utils;
 
 import java.util.ArrayList;
 import Punto10.dominio.Producto;
-import Punto10.dominio.Cuota;
+
 
 /**
  *
@@ -11,7 +11,7 @@ import Punto10.dominio.Cuota;
  */
 public class GestorCompra {
     ArrayList<Producto> productos =new ArrayList();
-    ArrayList<Cuota> cuotas = new ArrayList();
+    
 
     public GestorCompra() {
 //        Producto producto;
@@ -23,15 +23,7 @@ public class GestorCompra {
 //        productos.add(producto=new Producto("ARW876", "Mochila Key Whoss", 210.46));
 //        productos.add(producto=new Producto("ARW289", "Campera Algodón", 990.42));
         
-        Cuota cuota;
-        cuotas.add(cuota = new Cuota(1,"Una cuota",0.0));
-        cuotas.add(cuota = new Cuota(3,"Tres cuotas",0.0));
-        cuotas.add(cuota = new Cuota(6,"Seis cuotas",0.0));
-        cuotas.add(cuota = new Cuota(9,"Nueve cuotas",0.0));
-        cuotas.add(cuota = new Cuota(12,"Doce cuotas",0.0));
      
-        
-      
     }
 
     public ArrayList<Producto> getProductos() {
@@ -42,14 +34,7 @@ public class GestorCompra {
         this.productos = productos;
     }
 
-    public ArrayList<Cuota> getCuotas() {
-        return cuotas;
-    }
 
-    public void setCuotas(ArrayList<Cuota> cuotas) {
-         this.cuotas = cuotas;
-
-    }
     public void agregarProducto(Producto productos){
       this.productos.add(productos);
     }
@@ -61,6 +46,7 @@ public class GestorCompra {
     public void mostrarValorDeCuotas(double pr,int cuo){
        double interes=1.5; 
        double totalCuo= pr/cuo;
+       double total=0;
        double [] cuota = new double [12];
        
        for (int i=0; i<cuo;i++){
@@ -71,9 +57,11 @@ public class GestorCompra {
            
 
             totalCuo = pr / cuo;
+            total=total + totalCuo;
 
             
             }
+        System.out.println("La suma total a pagar es :" + total);
           
        }
 }
