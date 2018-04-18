@@ -34,12 +34,16 @@ public class TestPunto10 {
             System.out.println("Ingrese codigo del Producto");
             String cod=scanner.next();
             productos.setCodigo(cod);
+            scanner.nextLine();
             System.out.println("Ingrese nombre del producto");
-            String nom=scanner.next();
+            String nom=scanner.nextLine();
+            
             productos.setNombre(nom);
+            
             System.out.println("Ingrese precio");
             double pr=scanner.nextDouble();
-            productos.setPrecio(pr);
+             productos.setPrecio(pr);
+            
             
             gestor.agregarProducto(productos);
             gestor.mostrarListaDeProductos();
