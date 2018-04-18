@@ -11,13 +11,14 @@ import punto12.utils.Autor;
  *
  * @author Alejandro
  */
+//aqui se defiinira a la clase libro co sus atributos 
 public class Libro {
     private int ISBN;
     private String titulo;
     private Autor autor;
     private String categoria;
     private double precio;
-
+//sus constructores
     public Libro(int ISBN, String titulo, Autor autor, String categoria, double precio) {
         this.ISBN = ISBN;
         this.titulo = titulo;
@@ -28,7 +29,7 @@ public class Libro {
 
     public Libro() {
     }
-
+//getters y setters
     public int getISBN() {
         return ISBN;
     }

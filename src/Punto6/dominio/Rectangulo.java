@@ -9,12 +9,13 @@ package Punto6.dominio;
  *
  * @author Alejandro
  */
+//la clase rectangulo posee sus atributos 
 public class Rectangulo {
     private double base;
     private double altura;
     private double perimetro;
     private double superficie;
-
+//sus contrusctores
     public Rectangulo(double base, double altura, double perimetro, double superficie) {
         this.base = base;
         this.altura = altura;
@@ -25,7 +26,7 @@ public class Rectangulo {
     public Rectangulo(){
         
     }
-
+//los getters y setters
     public double getBase() {
         return base;
     }
@@ -57,7 +58,7 @@ public class Rectangulo {
     public void setSuperficie(double superficie) {
         this.superficie = superficie;
     }
-    
+    //La clase rectangulo tiene los metodos calcular superficie y calcular perimetro ya que cuando se desea saber el erimetro del triangulo el propio rectangulo deberia saber sus atributos que posee
     public double calcularSuperficie(){
         return (base *2 +altura*2);
     }

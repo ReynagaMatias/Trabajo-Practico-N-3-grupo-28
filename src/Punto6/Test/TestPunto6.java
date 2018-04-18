@@ -20,13 +20,17 @@ public class TestPunto6 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        //aqui se instancia las clases que se van a usar 
         GestorRectangulo gestor = new GestorRectangulo();
         Rectangulo rectangulo = new Rectangulo();
         Scanner teclado = new Scanner(System.in);
         double superficie, base , altura, perimetro;
+        //primero mostramos ya que tenems una lista de rectangulos ya precargada
         gestor.mostrarArrayList();
+        //le pedimos al usuario que ingrese la posicion que desea eliminar
         System.out.println("ingrese la posicion que desea eliminar: ");
         int indice = teclado.nextInt();
+        //eliminamos el rectangulo y mostramos
         gestor.eliminarRectangulo(indice);
         gestor.mostrarArrayList();
     }

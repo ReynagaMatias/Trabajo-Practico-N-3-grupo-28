@@ -9,10 +9,11 @@ package punto12.utils;
  *
  * @author Alejandro
  */
+//la clase autor es solamente para poder definir un atributo de la clase libro ya que el libro posee autor y autor deberia ser una clase con tambien sus respectivos atributos en este caso solamente le pusimos nombre y apellido
 public class Autor {
     private String nombre;
     private String apellido;
-
+//sus respectivos contructores
     public Autor() {
     }
 
@@ -20,7 +21,7 @@ public class Autor {
         this.nombre = nombre;
         this.apellido = apellido;
     }
-
+//getters y setters
     public String getNombre() {
         return nombre;
     }

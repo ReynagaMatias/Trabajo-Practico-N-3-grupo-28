@@ -9,10 +9,11 @@ package punto11.dominio;
  *
  * @author Alejandro
  */
+//en la clase zapatilla solamente tendremos los atributos marca y iriginal
 public class Zapatilla {
     private String marca;
     private Boolean original;
-
+//sus constructores
     public Zapatilla() {
     }
     
@@ -21,7 +22,7 @@ public class Zapatilla {
         this.original = original;
     }
     
-    
+    //getters y setters
 
     public String getMarca() {
         return marca;

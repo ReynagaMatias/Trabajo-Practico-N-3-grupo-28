@@ -9,10 +9,12 @@ package Punto2.dominio;
  *
  * @author Alejandro
  */
+
+//esta es la clase punto que solamente tiene 2 atributos
 public class Punto {
     private double x;
     private double y;
-
+//tiene su respectuvo constructor por defecto 
     public Punto() {
     }
 
@@ -20,7 +22,7 @@ public class Punto {
         this.x = x;
         this.y = y;
     }
-
+//los getters y setters
     public double getX() {
         return x;
     }
