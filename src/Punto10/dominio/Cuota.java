@@ -19,6 +19,10 @@ public class Cuota {
         this.descripcion = descripcion;
         this.valorDeCuota = valorDeCuota;
     }
+
+    public Cuota() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 
