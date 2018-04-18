@@ -63,6 +63,7 @@ public class GestorCompra {
 
             
             }
+       //aqui se muesra el total a pagar con interesees
         System.out.println("La suma total a pagar es :" + total);
           
        }
