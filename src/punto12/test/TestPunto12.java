@@ -40,8 +40,11 @@ public class TestPunto12 {
             switch (opc) {
                 case 1:
                     ambos = true;
-                    for(int i=0;i< libreria.getLibros().size();i++){
-                        System.out.println("Titulo; "+libreria.getLibros().get(i).getTitulo()+", Categoria; " + libreria.getCategorias().get(i));
+                    for (int i = 0; i < libreria.getLibros().size(); i++) {
+                        System.out.println("Titulo; " + libreria.getLibros().get(i).getTitulo());
+                    }
+                    for(int j=0; j < libreria.getCategorias().size();j++){
+                        System.out.println("Categoria; " + libreria.getCategorias().get(j));
                     }
                     System.out.println("Ingrese la categoria: ");
                     String categoria = teclado.nextLine();
@@ -51,7 +54,7 @@ public class TestPunto12 {
                     break;
                 case 2:
                     ambos = false;
-                    for(int i = 0; i< libreria.getLibros().size();i++){
+                    for (int i = 0; i < libreria.getLibros().size(); i++) {
                         System.out.println(libreria.getLibros().get(i).getTitulo());
                     }
                     System.out.println("Ingrese el titulo por el cual desea buscar");
@@ -60,7 +63,7 @@ public class TestPunto12 {
                     break;
                 case 3:
                     ambos = false;
-                    for(int i = 0; i<libreria.getCategorias().size();i++){
+                    for (int i = 0; i < libreria.getCategorias().size(); i++) {
                         System.out.println(libreria.getCategorias().get(i));
                     }
                     System.out.println("Ingrese la categoria por la cual desea buscar");
@@ -70,8 +73,8 @@ public class TestPunto12 {
                 case 4:
                     ambos = false;
                     Autor autor = new Autor();
-                    for(int i=0;i<libreria.getAutores().size();i++){
-                    System.out.println(libreria.getAutores().get(i).getApellido()+", "+libreria.getAutores().get(i).getNombre());
+                    for (int i = 0; i < libreria.getAutores().size(); i++) {
+                        System.out.println(libreria.getAutores().get(i).getApellido() + ", " + libreria.getAutores().get(i).getNombre());
                     }
                     System.out.println("Ingrese el apellido o apellido del autor: ");
                     String nombreautor = teclado.next();

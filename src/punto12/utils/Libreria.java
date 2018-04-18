@@ -78,7 +78,7 @@ public class Libreria {
         for (int i = 0; i < libros.size(); i++) {
             if (ambos == false && autorBuscado !=null ) {
                 if (libros.get(i).getAutor().getApellido().equals(autorBuscado) || libros.get(i).getAutor().getNombre().equals(autorBuscado)) {
-                    System.out.println("Los datos del libro buscado son: El ISBN es: " + libros.get(i).getISBN() + " el titutlo es: " + libros.get(i).getTitulo() + ". El autor es: " + libros.get(i).getAutor() + ". La categoria es: " + libros.get(i).getCategoria() + ". El precio es: " + libros.get(i).getPrecio());
+                    System.out.println("Los datos del libro buscado son: El ISBN es: " + libros.get(i).getISBN() + " el titutlo es: " + libros.get(i).getTitulo() + ". El autor es: " + libros.get(i).getAutor().getNombre()+","+libros.get(i).getAutor().getApellido() + ". La categoria es: " + libros.get(i).getCategoria() + ". El precio es: " + libros.get(i).getPrecio());
                 }
             } else {
                 if (ambos == true && tituloBuscado != null && categoriaBuscado!=null) {
