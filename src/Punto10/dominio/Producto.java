@@ -8,10 +8,10 @@ package Punto10.dominio;
 /**
  *
  * @author Ines
- * 
+ *
  */
-
 public class Producto { //Clase Producto con sus atributos codigo nombre y precios con sus respectivos constructores getter y setter
+
     private String codigo;
     private String nombre;
     private double precio;
@@ -23,10 +23,8 @@ public class Producto { //Clase Producto con sus atributos codigo nombre y preci
     }
 
     public Producto() {
-        
+
     }
-    
-    
 
     public String getCodigo() {
         return codigo;
@@ -35,8 +33,6 @@ public class Producto { //Clase Producto con sus atributos codigo nombre y preci
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
-
-  
 
     public String getNombre() {
         return nombre;
@@ -53,6 +49,5 @@ public class Producto { //Clase Producto con sus atributos codigo nombre y preci
     public void setPrecio(double precio) {
         this.precio = precio;
     }
-    
-    
+
 }

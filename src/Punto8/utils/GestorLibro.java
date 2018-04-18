@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author User
+ * @author Ines
  */
 public class GestorLibro {
     ArrayList<Libro> libros = new ArrayList();
