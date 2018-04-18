@@ -5,7 +5,7 @@
  */
 package Punto10.Test;
 
-import Punto10.dominio.Cuota;
+
 import Punto10.dominio.Producto;
 import Punto10.utils.GestorCompra;
 import java.util.Scanner;
@@ -22,13 +22,13 @@ public class TestPunto10 {
     public static void main(String[] args) {
         GestorCompra gestor = new GestorCompra();
         Producto productos=new Producto();
-        Cuota cuotas = new Cuota();
+        
         Scanner scanner=new Scanner(System.in);
         
         
         char r='s';
        
-        
+        // aqui ingresa los datos los datos del producto  y se pide el numero de cuotas en que desea pagar por el producto
         while (r=='s'|| r=='S')
         {
             System.out.println("Ingrese codigo del Producto");
@@ -46,16 +46,17 @@ public class TestPunto10 {
             
            System.out.println("ingrese en cuatas cuotas desea pagar (hasta 12 cuotas)");
            int cuo=scanner.nextInt();
+            System.out.println("LISTA DE CUOTAS CON INTERESES");
            gestor.mostrarValorDeCuotas(pr, cuo);
            
             System.out.println("Desea seguir comprando productos");
             String res=scanner.next();
             r=res.charAt(0);
             
-
         }
-    }
-        
+        }
+    
+}
     
     
 

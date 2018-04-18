@@ -7,9 +7,11 @@ package Punto10.dominio;
 
 /**
  *
- * @author User
+ * @author Ines
+ * 
  */
-public class Producto {
+
+public class Producto { //Clase Producto con sus atributos codigo nombre y precios con sus respectivos constructores getter y setter
     private String codigo;
     private String nombre;
     private double precio;
@@ -21,7 +23,7 @@ public class Producto {
     }
 
     public Producto() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
     
     

@@ -34,30 +34,32 @@ public class GestorCompra {
         this.productos = productos;
     }
 
-
+ 
     public void agregarProducto(Producto productos){
       this.productos.add(productos);
     }
+    // Este metodo muestra los productos que se ingresan
     public void mostrarListaDeProductos(){
         for(int i=0;i<productos.size();i++){
             System.out.println("Codigo: " + productos.get(i).getCodigo()+" Nombre: " + productos.get(i).getNombre()+" Precio: "+productos.get(i).getPrecio());
         }
     }
+    
+    //este metodo muestra las cantidad de cuotas que se elijio y el precio a pagar en cada cuota
     public void mostrarValorDeCuotas(double pr,int cuo){
        double interes=1.5; 
        double totalCuo= pr/cuo;
+       double valorCuota=0;
        double total=0;
        double [] cuota = new double [12];
        
        for (int i=0; i<cuo;i++){
            
-           totalCuo = totalCuo + (pr* (interes * i) / 100);
-           cuota[i]=totalCuo;
+           valorCuota = totalCuo + (pr* (interes * i) / 100);
+           cuota[i]=valorCuota;
            System.out.println(i+" cuota: "+cuota[i]);
-           
-
-            totalCuo = pr / cuo;
-            total=total + totalCuo;
+            
+            total=total + valorCuota;
 
             
             }
