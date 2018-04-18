@@ -7,6 +7,7 @@ package punto12.test;
 
 import Punto8.dominio.Libro;
 import java.util.Scanner;
+import punto12.utils.Autor;
 import punto12.utils.Libreria;
 
 /**
@@ -23,28 +24,55 @@ public class TestPunto12 {
         Libreria libreria = new Libreria();
         Libro libro = new Libro();
         boolean ambos = false;
+        int opc;
         Scanner teclado = new Scanner(System.in);
+        Scanner tecladoint = new Scanner(System.in);
         char resp = 'S';
-        while (resp == 'S' || resp == 's') {
-            System.out.println("Desea buscar por titulo y categoria? S/N");
-            String busqueda = teclado.next();
-            char caracterBusqueda = busqueda.charAt(0);
-            if (caracterBusqueda == 's' || caracterBusqueda == 'S') {
-                ambos = true;
-                System.out.println("Ingrese la categoria: ");
-                String categoria = teclado.next();
-                System.out.println("Ingrese el titulo: ");
-                String titulo = teclado.next();
-                libreria.consultarlibro(ambos, titulo, categoria, null);
-            } else {
-                System.out.println("Ingrese el autor: ");
-                String autor = teclado.next();
-                libreria.consultarlibro(ambos, null, null, autor);
-            }
-            System.out.println("Desea realizar otra consulta? S/N");
-            String respuesta = teclado.next();
-            resp = respuesta.charAt(0);
-        }
-    }
+        do {
+            System.out.println("-------------MENU-----------");
+            System.out.println("1) Buscar por titulo y categoria?");
+            System.out.println("2) Buscar solo por titulo");
+            System.out.println("3) Buscar solo por categoria");
+            System.out.println("4) Buscar por Autor");
+            System.out.println("5( Salir del programa");
+            System.out.println("seleccione una opcion");
+            opc = tecladoint.nextInt();
+            switch (opc) {
+                case 1:
+                    ambos = true;
+                    System.out.println("Ingrese la categoria: ");
+                    String categoria = teclado.nextLine();
+                    System.out.println("Ingrese el titulo: ");
+                    String titulo = teclado.nextLine();
+                    libreria.consultarlibro(ambos, titulo, categoria, null);
+                    break;
+                case 2:
+                    ambos = false;
+                    System.out.println("Ingrese el titulo por el cual desea buscar");
+                    String titulo1 = teclado.nextLine();
+                    libreria.consultarlibro(ambos, titulo1, null, null);
+                    break;
+                case 3:
+                    ambos = false;
+                    System.out.println("Ingrese la categoria por la cual desea buscar");
+                    String categoria1 = teclado.nextLine();
+                    libreria.consultarlibro(ambos, null, categoria1, null);
+                    break;
+                case 4:
+                    ambos = false;
+                    Autor autor = new Autor();
+                    for(int i=0;i<libreria.getAutores().size();i++){
+                    System.out.println(libreria.getAutores().get(i).getApellido()+", "+libreria.getAutores().get(i).getNombre());
+                    }
+                    System.out.println("Ingrese el apellido o apellido del autor: ");
+                    String nombreautor = teclado.next();
+                    libreria.consultarlibro(ambos, null, null, nombreautor);
+                    break;
+                default:
+                    System.out.println("Ingreso una opcion incorrecta");
+                    break;
 
+            }
+        } while (opc != 5);
+    }
 }

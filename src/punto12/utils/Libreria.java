@@ -24,8 +24,8 @@ public class Libreria {
         autores.add(autor = new Autor("Hector", "Liberatori"));
         autores.add(autor = new Autor("Stephen", "Hawking"));
         autores.add(autor = new Autor("Richard", "Stalman"));
-        autores.add(autor = new Autor("Anabel","Rosales"));
-        autores.add(autor = new Autor("Caceres" ,"Pedro"));
+        autores.add(autor = new Autor("Anabel", "Rosales"));
+        autores.add(autor = new Autor("Caceres", "Pedro"));
         autores.add(autor = new Autor("Marciel", "Jack"));
         autores.add(autor = new Autor("Peñaloza", "Alfredo"));
         categorias.add("Matematica");
@@ -76,13 +76,27 @@ public class Libreria {
 
     public void consultarlibro(boolean ambos, String tituloBuscado, String categoriaBuscado, String autorBuscado) {
         for (int i = 0; i < libros.size(); i++) {
-            if (ambos == false) {
-                if (libros.get(i).getAutor().equals(autorBuscado)) {
+            if (ambos == false && autorBuscado !=null ) {
+                if (libros.get(i).getAutor().getApellido().equals(autorBuscado) || libros.get(i).getAutor().getNombre().equals(autorBuscado)) {
                     System.out.println("Los datos del libro buscado son: El ISBN es: " + libros.get(i).getISBN() + " el titutlo es: " + libros.get(i).getTitulo() + ". El autor es: " + libros.get(i).getAutor() + ". La categoria es: " + libros.get(i).getCategoria() + ". El precio es: " + libros.get(i).getPrecio());
                 }
             } else {
-                if ((libros.get(i).getTitulo().equals(tituloBuscado)) || (libros.get(i).getCategoria().equals(categoriaBuscado))) {
-                    System.out.println("Los datos del libro buscado son: El ISBN es: " + libros.get(i).getISBN() + " el titutlo es: " + libros.get(i).getTitulo() + ". El autor es: " + libros.get(i).getAutor() + ". La categoria es: " + libros.get(i).getCategoria() + ". El precio es: " + libros.get(i).getPrecio());
+                if (ambos == true && tituloBuscado != null && categoriaBuscado!=null) {
+                    if ((libros.get(i).getTitulo().equals(tituloBuscado)) || (libros.get(i).getCategoria().equals(categoriaBuscado))) {
+                        System.out.println("Los datos del libro buscado son: El ISBN es: " + libros.get(i).getISBN() + " el titutlo es: " + libros.get(i).getTitulo() + ". El autor es: " + libros.get(i).getAutor() + ". La categoria es: " + libros.get(i).getCategoria() + ". El precio es: " + libros.get(i).getPrecio());
+                    }
+                }else{
+                    if(ambos==false && categoriaBuscado!=null){
+                        if(libros.get(i).getCategoria().equals(categoriaBuscado)){
+                            System.out.println("Los datos del libro buscado son: El ISBN es: "+ libros.get(i).getISBN()+" el titulo es: "+libros.get(i).getTitulo()+". El nombre del autor es:"+ libros.get(i).getAutor().getNombre()+". La Categoria es: "+libros.get(i).getCategoria()+", El precio es: "+libros.get(i).getPrecio());
+                        }
+                    }else{
+                        if(ambos==false && tituloBuscado!=null){
+                            if(libros.get(i).getTitulo().equals(tituloBuscado)){
+                                System.out.println("Los datos del libro buscado son: El ISBN es: "+ libros.get(i).getISBN()+" el titulo es: "+libros.get(i).getTitulo()+". El nombre del autor es:"+ libros.get(i).getAutor().getNombre()+". La Categoria es: "+libros.get(i).getCategoria()+", El precio es: "+libros.get(i).getPrecio());
+                            }
+                        }
+                    }
                 }
             }
         }
