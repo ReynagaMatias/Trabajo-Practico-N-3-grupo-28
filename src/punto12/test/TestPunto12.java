@@ -34,11 +34,11 @@ public class TestPunto12 {
                 System.out.println("Ingrese la categoria: ");
                 String categoria = teclado.next();
                 System.out.println("Ingrese el titulo: ");
-                String titulo = teclado.next();//al titulo se lo iso solamente con .next ya que cuando se ejecuta el metodo de teclado .nextline hace un salto de linea
+                String titulo = teclado.next();
                 libreria.consultarlibro(ambos, titulo, categoria, null);
             } else {
-                System.out.println("Ingrese el autor: ");//problema con scanner
-                String autor = teclado.next();//aqui tambien se tuvo que poner solamente next por el problema mencionado anteriormente en este caso no da error ya que en la tabla precargada se cargo solamente los apellidos
+                System.out.println("Ingrese el autor: ");
+                String autor = teclado.next();
                 libreria.consultarlibro(ambos, null, null, autor);
             }
             System.out.println("Desea realizar otra consulta? S/N");

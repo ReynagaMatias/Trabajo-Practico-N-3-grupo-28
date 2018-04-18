@@ -5,6 +5,8 @@
  */
 package punto12.dominio;
 
+import punto12.utils.Autor;
+
 /**
  *
  * @author Alejandro
@@ -12,11 +14,11 @@ package punto12.dominio;
 public class Libro {
     private int ISBN;
     private String titulo;
-    private String autor;
+    private Autor autor;
     private String categoria;
     private double precio;
 
-    public Libro(int ISBN, String titulo, String autor, String categoria, double precio) {
+    public Libro(int ISBN, String titulo, Autor autor, String categoria, double precio) {
         this.ISBN = ISBN;
         this.titulo = titulo;
         this.autor = autor;
@@ -43,11 +45,11 @@ public class Libro {
         this.titulo = titulo;
     }
 
-    public String getAutor() {
+    public Autor getAutor() {
         return autor;
     }
 
-    public void setAutor(String autor) {
+    public void setAutor(Autor autor) {
         this.autor = autor;
     }
 
