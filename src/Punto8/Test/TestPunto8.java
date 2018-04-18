@@ -30,30 +30,33 @@ public class TestPunto8 {
         char r='s';
        
         
-        while (r=='s'|| r=='S')
+        while (r=='s'|| r=='S') // se pide los datos del libro hasta que el usuario hasta que el usuario lo disponga
         {
             System.out.println("ingrese ISBN ");
             int cod=scanner.nextInt();
             libros.setISBN(cod);
+            scanner.nextLine();
             System.out.println("Ingrese titulo ");
-            String tit=scanner.next();
+            String tit=scanner.nextLine();           
             libros.setTitulo(tit);
             System.out.println("Ingrese Autor ");
-            String aut=scanner.next();
+            String aut=scanner.nextLine();
             libros.setAutor(aut);
+           
             System.out.println("Ingrese Precio ");
             double pre=scanner.nextDouble();
             libros.setPrecio(pre);
-            
+            scanner.nextLine();
             
             gestor.agregarLibro(libros);
             libros  = new Libro();
+            gestor.mostrarListaDeLibros(); // se realiza el llamamiento del metodo mostrarListaDeLibro de la clase GestorLibro
             
             System.out.println("Desea seguir agregando libros");
             String res=scanner.next();
             r=res.charAt(0);
         }
-        gestor.mostrarListaDeLibros();
+        
     }
     
 }

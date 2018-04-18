@@ -9,7 +9,7 @@ package Punto8.dominio;
  *
  * @author User
  */
-public class Libro {
+public class Libro { //la clase Libro con sus atributos ISBN titulo autor y precio con sus constructores setter y getter
     private int ISBN;
     private String titulo;
     private String autor;

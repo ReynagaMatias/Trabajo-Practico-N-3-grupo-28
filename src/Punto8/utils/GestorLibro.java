@@ -28,13 +28,13 @@ public class GestorLibro {
         this.libros = libros;
     }
     
-    public void agregarLibro(Libro libros){
+    public void agregarLibro(Libro libros){ //este metodo agrega libros en la ultima posicion de un ArrayList
         this.libros.add(libros);
         
     }
-    public void mostrarListaDeLibros(){
+    public void mostrarListaDeLibros(){ // este metodo muestra la lista de los libros ingresador por el usuario
         for(int i=0; i<libros.size();i++)
-            System.out.println(i+") " + "ISBN: "+libros.get(i).getISBN()+" Titulo: "+libros.get(i).getTitulo()+" Autor: "+libros.get(i).getAutor()+ " Precio: "+libros.get(i).getPrecio());
+            System.out.println(i+") " + "ISBN: "+libros.get(i).getISBN()+"  Titulo: "+libros.get(i).getTitulo()+"  Autor: "+libros.get(i).getAutor()+ "  Precio: "+libros.get(i).getPrecio());
     }
     
 }
