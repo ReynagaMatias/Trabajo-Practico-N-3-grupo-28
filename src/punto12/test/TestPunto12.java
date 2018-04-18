@@ -40,6 +40,9 @@ public class TestPunto12 {
             switch (opc) {
                 case 1:
                     ambos = true;
+                    for(int i=0;i< libreria.getLibros().size();i++){
+                        System.out.println("Titulo; "+libreria.getLibros().get(i).getTitulo()+", Categoria; " + libreria.getCategorias().get(i));
+                    }
                     System.out.println("Ingrese la categoria: ");
                     String categoria = teclado.nextLine();
                     System.out.println("Ingrese el titulo: ");
@@ -48,12 +51,18 @@ public class TestPunto12 {
                     break;
                 case 2:
                     ambos = false;
+                    for(int i = 0; i< libreria.getLibros().size();i++){
+                        System.out.println(libreria.getLibros().get(i).getTitulo());
+                    }
                     System.out.println("Ingrese el titulo por el cual desea buscar");
                     String titulo1 = teclado.nextLine();
                     libreria.consultarlibro(ambos, titulo1, null, null);
                     break;
                 case 3:
                     ambos = false;
+                    for(int i = 0; i<libreria.getCategorias().size();i++){
+                        System.out.println(libreria.getCategorias().get(i));
+                    }
                     System.out.println("Ingrese la categoria por la cual desea buscar");
                     String categoria1 = teclado.nextLine();
                     libreria.consultarlibro(ambos, null, categoria1, null);
