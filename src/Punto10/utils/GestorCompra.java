@@ -2,6 +2,7 @@ package Punto10.utils;
 
 import java.util.ArrayList;
 import Punto10.dominio.Producto;
+import java.text.DecimalFormat;
 
 /**
  *
@@ -10,6 +11,7 @@ import Punto10.dominio.Producto;
 public class GestorCompra {
 
     ArrayList<Producto> productos = new ArrayList();
+    DecimalFormat formato=new DecimalFormat("#0.00"); //le damos el formato a un numero decimal
 
     public GestorCompra() {
 //        Producto producto;
@@ -48,13 +50,13 @@ public class GestorCompra {
         double totalCuo = pr / cuo;
         double valorCuota = 0;
         double total = 0;
-        double[] cuota = new double[12];
+        double[] cuota = new double[100];
 
         for (int i = 0; i < cuo; i++) {
 
             valorCuota = totalCuo + (pr * (interes * i) / 100);
             cuota[i] = valorCuota;
-            System.out.println(i + " cuota: " + cuota[i]);
+            System.out.println(i + " cuota: " + (formato.format(cuota[i])));
 
             total = total + valorCuota;
 
