@@ -22,7 +22,7 @@ public class TestPunto9 {
         gestor.mostrarListaDeLibros();  // se realiza el llamamiento del metodo mostrarListaDeLibro de la clase GestorLibro
 
         System.out.println("ingrese nombre del Libro que desea buscar ");
-        String n = scanner.nextLine();
+        String n = scanner.nextLine(); // se almacena en n el nombre de libro de tipo string
         gestor.buscarLibro(n); // se realiza el llamamiento del metodo buscarLibro de la clase GestorLibro
 
     }

@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * @author Ines
  */
 public class GestorLibro {
-    ArrayList<Libro> libros = new ArrayList();
+    ArrayList<Libro> libros = new ArrayList(); // se crea el ArryList 
 
     public GestorLibro() {
     }

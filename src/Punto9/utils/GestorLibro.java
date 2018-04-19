@@ -37,7 +37,7 @@ public class GestorLibro {
         }
     }
 
-    public void buscarLibro(String n) { // este metodo realiza la busqueda de un libro por nombre 
+    public void buscarLibro(String n) { // este metodo realiza la busqueda de un libro por nombre y lo muestra
         for (int i = 0; i < libros.size(); i++) {
             if (libros.get(i).getTitulo().equals(n)) {
 

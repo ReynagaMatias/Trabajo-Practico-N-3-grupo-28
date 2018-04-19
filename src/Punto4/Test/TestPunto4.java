@@ -18,7 +18,7 @@ public class TestPunto4 {
         GestorArreglo gestor = new GestorArreglo();
         Scanner scanner = new Scanner(System.in);
 
-        for (int i = 0; i < 10; i++) { // se carga el vector
+        for (int i = 0; i < 10; i++) { // se carga el vector de 10 posiciones
             System.out.println(i + "ingrese numero:");
             int nro = scanner.nextInt();
             num[i] = nro;
