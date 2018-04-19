@@ -65,5 +65,4 @@ public class GestorCompra {
         System.out.println("La suma total a pagar es :" + total);
 
     }
-    
 }
