@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author User
+ * @author Ines
  */
 public class GestorLibro {
 

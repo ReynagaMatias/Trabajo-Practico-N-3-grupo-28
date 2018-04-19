@@ -56,7 +56,7 @@ public class GestorArreglo {
        
         }
         prom=total/num.length;
-        return prom;
+        return prom; //devuelve el promedio
     }
 
 }

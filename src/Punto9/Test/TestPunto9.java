@@ -1,4 +1,3 @@
-
 package Punto9.Test;
 
 import Punto9.dominio.Libro;
@@ -18,19 +17,14 @@ public class TestPunto9 {
         // TODO code application logic here
         GestorLibro gestor = new GestorLibro();
         Libro libros = new Libro();
-        Scanner scanner= new Scanner(System.in);
-       
-          
+        Scanner scanner = new Scanner(System.in);
+
         gestor.mostrarListaDeLibros();  // se realiza el llamamiento del metodo mostrarListaDeLibro de la clase GestorLibro
-        
-       
- 
-     
+
         System.out.println("ingrese nombre del Libro que desea buscar ");
-        String n= scanner.nextLine();
+        String n = scanner.nextLine();
         gestor.buscarLibro(n); // se realiza el llamamiento del metodo buscarLibro de la clase GestorLibro
-        
-      
+
     }
-    
+
 }

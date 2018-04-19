@@ -61,7 +61,7 @@ public class GestorCompra {
             total = total + valorCuota;
 
         }
-        //aqui se muesra el total a pagar con interesees
+        //aqui se muesra el total a pagar con intereses
         System.out.println("La suma total a pagar es :" + total);
 
     }

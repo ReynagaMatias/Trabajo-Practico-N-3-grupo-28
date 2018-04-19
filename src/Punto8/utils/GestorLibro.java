@@ -33,4 +33,5 @@ public class GestorLibro {
             System.out.println(i+") " + "ISBN: "+libros.get(i).getISBN()+"  Titulo: "+libros.get(i).getTitulo()+"  Autor: "+libros.get(i).getAutor()+ "  Precio: "+libros.get(i).getPrecio());
     }
     
+    
 }

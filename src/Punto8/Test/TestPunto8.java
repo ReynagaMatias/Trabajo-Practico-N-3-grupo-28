@@ -28,7 +28,7 @@ public class TestPunto8 {
         
         while (r=='s'|| r=='S') // se pide los datos del libro hasta que el usuario hasta que el usuario lo disponga
         {
-            System.out.println("ingrese ISBN ");
+            System.out.println("ingrese ISBN "); //ingreso de datos de libro
             int cod=scanner.nextInt();
             libros.setISBN(cod);
             scanner.nextLine();

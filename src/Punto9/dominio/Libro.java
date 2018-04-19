@@ -3,7 +3,7 @@ package Punto9.dominio;
 
 /**
  *
- * @author User
+ * @author Ines
  */
 public class Libro {   //La clase Libro con sus atributos ISBN tituto autor y precio con sus respectivos constructores getter y setter
     private int ISBN;
